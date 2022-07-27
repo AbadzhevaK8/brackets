@@ -3,9 +3,7 @@ module.exports = function check(str, bracketsConfig) {
   bracketsConfig.forEach((val) => {
     brackets.push(val[0] + val[1]);
   });
-
   let myStr = str;
-
   while (myStr) {
     let tmpStr = myStr;
     brackets.forEach(function (item) {
@@ -15,7 +13,5 @@ module.exports = function check(str, bracketsConfig) {
       return false;
     }
   }
-  if (myStr === '') {
-    return true;
-  }
+  return true;
 }
